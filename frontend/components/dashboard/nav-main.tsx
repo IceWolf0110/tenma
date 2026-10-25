@@ -1,6 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -8,7 +7,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { CirclePlusIcon, MailIcon } from "lucide-react"
+import { CirclePlusIcon } from "lucide-react"
+import { ModeToggle } from "../mode-toggle"
 
 export function NavMain({
   items,
@@ -31,14 +31,7 @@ export function NavMain({
               <CirclePlusIcon />
               <span>Quick Create</span>
             </SidebarMenuButton>
-            <Button
-              size="icon"
-              className="size-8 group-data-[collapsible=icon]:opacity-0"
-              variant="outline"
-            >
-              <MailIcon />
-              <span className="sr-only">Inbox</span>
-            </Button>
+            <ModeToggle />
           </SidebarMenuItem>
         </SidebarMenu>
         <SidebarMenu>
